@@ -1,14 +1,12 @@
 -- 4.1
 CREATE TABLE
-    Softs AS (
-        SELECT
-            nomLog,
-            version,
-            prix
-    );
-
-ALTER TABLE Softs
-RENAME COLUMN nomLog TO nomSoft;
+    Softs AS
+SELECT
+    l.nomLog AS nomSoft,
+    l.version AS version,
+    l.prix AS prix
+FROM
+    Logiciel l;
 
 CREATE TABLE
     PCSeuls AS

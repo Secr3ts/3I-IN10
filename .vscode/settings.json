@@ -1,0 +1,5 @@
+{
+  "java.project.referencedLibraries": [
+    "TP6/lib/**/*.jar"
+  ]
+}

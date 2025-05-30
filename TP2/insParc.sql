@@ -1,3 +1,4 @@
+-- 2.1
 INSERT INTO Segment (indIP, nomSegment, etage) VALUES
 ('130.120.80', 'Brin RDC', NULL),
 ('130.120.81', 'Brin 1er étage', NULL),
@@ -44,6 +45,7 @@ INSERT INTO Types (typeLP, nomType) VALUES
 ('PCWS', 'PC Windows'),
 ('NC', 'Network Computer');
 
+-- 2.2
 INSERT INTO Installer (nPoste, nLog, numIns, dateIns, delai) VALUES
 ('p2', 'log1', 1, '2003-05-15', NULL),
 ('p2', 'log2', 2, '2003-09-17', NULL),

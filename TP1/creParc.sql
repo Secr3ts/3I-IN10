@@ -1,4 +1,4 @@
-# creParc.sql - TP1
+-- 1.2
 CREATE DATABASE Parc;
 USE Parc;
 

@@ -1,5 +1,4 @@
 # creParc.sql - TP1
-CREATE DATABASE Parc;
 USE Parc;
 
 CREATE TABLE Segment (

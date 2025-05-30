@@ -16,20 +16,20 @@ WHERE
 SELECT
     nomP,
     seg,
-    nSalle
+    salle
 FROM
     PCSeuls;
 
 SELECT
     nomP,
     seg,
-    nSalle
+    salle
 FROM
     PCSeuls
 WHERE
     seg = '130.120.80'
 ORDER BY
-    nSalle DESC;
+    salle DESC;
 
 SELECT
     nLog
@@ -97,7 +97,7 @@ FROM
     Installer
 GROUP BY
     nPoste
-WHERE
+HAVING
     COUNT(DISTINCT nLog) = 2;
 
 SELECT
@@ -110,7 +110,7 @@ FROM
             Installer
         GROUP BY
             nPoste
-        WHERE
+        HAVING
             COUNT(DISTINCT nLog) = 2
     ) AS postes;
 
