@@ -1,0 +1,42 @@
+-- 3.1
+
+ALTER TABLE Segment
+ALTER COLUMN nbSalle TINYINT(2) DEFAULT 0,
+ALTER COLUMN nbPoste TINYINT(2) DEFAULT 0
+;
+
+ALTER TABLE Logiciel
+ALTER COLUMN nbInstall TINYINT(2) DEFAULT 0;
+
+ALTER TABLE Poste
+ALTER COLUMN nbLog TINYINT(2) DEFAULT 0;
+
+-- 3.2
+
+ALTER TABLE Salle
+ALTER COLUMN nomSalle VARCHAR(30);
+
+ALTER TABLE Segment
+ALTER COLUMN nomSegment VARCHAR(15);
+
+ALTER TABLE Segment
+ALTER COLUMN nomSegment VARCHAR(14)
+
+-- Pas possible car nomSegment == 14 ?
+
+-- 3.3
+ALTER TABLE Installation
+ADD CONSTRAINT u UNIQUE (nPoste, nLog);
+
+ALTER TABLE Poste
+ADD CONSTRAINT fk_poste_type
+FOREIGN KEY (typePoste) REFERENCES Types(typeLP);
+
+ALTER TABLE Logiciel
+ADD CONSTRAINT fk_lt
+FOREIGN KEY (typeLog) REFERENCES Types(typeLP);
+
+-- 3.4
+
+INSERT INTO Types (typeLP, nomType) VALUES
+('BeOS', 'Système Be'),
